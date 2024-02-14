@@ -1,0 +1,80 @@
+.task-card {
+  background-color: #f4f5f7;
+  border: 1px solid #dfe1e6;
+  border-radius: 5px;
+  padding: 20px;
+  padding-top: 0%;
+  padding-left: 0%;
+
+  width: 250px; /* Adjust the width as desired */
+  height: 120px; /* Adjust the height as desired */
+  margin: 10px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+  padding: 10px;
+}
+
+.task-column {
+  margin-bottom: 8px;
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line */
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px; /* Add this line */
+  font-size: 60%;
+  width: 70px; /* Adjust the width of labels */
+}
+
+input,
+select {
+  flex: 1; /* Allow the input fields to grow and fill the remaining space */
+  padding: 8px; /* Increase padding for better appearance */
+  border: 1px solid #000000; /* Adjust the border color */
+  border-radius: 3px;
+  height: 1px; /* Adjust the height as desired */
+}
+
+/* For date input */
+input[type="date"] {
+  padding: 8px; /* Increase padding for better appearance */
+  border: 1px solid #dfe1e6; /* Adjust the border color */
+  border-radius: 3px;
+  height: 1px; /* Adjust the height as desired */
+}
+
+select {
+  width: 100%; /* Adjust the width of selects */
+}
+
+.green-option {
+  color: green;
+}
+
+.orange-option {
+  color: orange;
+}
+
+.red-option {
+  color: red;
+}
+
+/* TaskCard.css */
+/* Styling for select element */
+select {
+  width: 100%; /* Ensure the select element takes up the full width */
+  padding: 8px; /* Add padding for better appearance */
+  font-size: 16px; /* Set font size */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Add border radius */
+  appearance: none; /* Remove default arrow */
+}
+
+/* Styling for selected option */
+select option:checked {
+  background-color: #cb1010; /* Change background color for selected option */
+}

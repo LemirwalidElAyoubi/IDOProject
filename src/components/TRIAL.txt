@@ -1,0 +1,2182 @@
+// TodoList.js
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faClipboardList,
+  faCog,
+  faCheckCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import "../DashboardPage.css"; // Import your CSS file for styling if needed
+import TaskCard from "./TaskCard";
+
+const TodoList = () => {
+  return (
+    <div>
+      <div class="sc-1jdflr3-0 drkBug">
+        <div class="ugrbwv-0 obrxP">
+          <div
+            class="sc-1hc9cht-0 eIJaZP"
+            data-component-selector="platform-board-kit.ui.column.draggable-column"
+            data-testid="platform-board-kit.ui.column.draggable-column.styled-wrapper"
+            draggable="true"
+            data-drop-target-for-element="true"
+          >
+            <div class="sc-1hc9cht-1 FxHxE">
+              <div class="__board-test-hook__column sc-1ef3ied-1 cgwwdw j4whmj-0 gftcoT">
+                <div class="sc-1xtha37-1 hSyVYa sc-1xtha37-0 hpIWPi">
+                  <div
+                    class="sc-1k8t1g3-0 letSNF"
+                    data-testid="platform-board-kit.common.ui.column-header.header.column-header-container"
+                  >
+                    <div
+                      class="_1e0c1txw _2lx21bp4 _1n261q9c _1bah1h6o _4cvr1fhb _16jlkb7n _1o9zkb7n _i0dl1wug _1wpz1wug _p12f1osq _7ehi2jkb _nt751r31 _49pcglyw _1hvw1o36 _1yt4iq2b _1bsb1osq _4t3is4d4"
+                      style={{
+                        "--_6nps2s": "var(--ds-space-200, 16px) 0",
+                        "--_16ia0uc": "calc(100% - var(--ds-space-400, 32px))",
+                      }}
+                    >
+                      <div class="sc-1wvkof1-2 dXSenY">
+                        <div class="sc-1wvkof1-3 fiqzkn">
+                          <div class="sc-1dbmt9d-0 kSUAZi">
+                            <form>
+                              <div class="css-q5x77e">
+                                <div class="css-1v0cd8t">
+                                  <button
+                                    aria-label="Edit "
+                                    type="button"
+                                    class="css-g2hnkr"
+                                  ></button>
+                                  <div
+                                    role="presentation"
+                                    data-read-view-fit-container-width="true"
+                                    class="css-u3i0v"
+                                  >
+                                    <div class="_1ul9idpf _1e0c1txw _4cvr1h6o">
+                                      <h2
+                                        class="__board-test-hook__column-title j-BFpW_compactColumnTitle rj51p4-0 eddmWW"
+                                        aria-label="To Do"
+                                        data-test-id="platform-board-kit.common.ui.column-header.editable-title.column-title.column-title"
+                                        data-component-selector="platform-board-kit.ui.column-title"
+                                      >
+                                        <div
+                                          class="rj51p4-1 jbcAnp"
+                                          title="To Do"
+                                        >
+                                          To Do
+                                        </div>
+                                        <div class="_1e0c1txw _18u01b66">
+                                          <div class="_syaz1rc1 _1ul9idpf _16jlidpf _1o9zidpf _2hwx1b66">
+                                            <span style={{ whiteSpace: "pre" }}>
+                                              <span
+                                                style={{
+                                                  position: "relative",
+                                                  display: "inline-block",
+                                                }}
+                                              >
+                                                <span
+                                                  style={{
+                                                    visibility: "hidden",
+                                                  }}
+                                                >
+                                                  8
+                                                </span>
+                                                <span
+                                                  style={{
+                                                    display: "inline-block",
+                                                    position: "absolute",
+                                                    left: "0px",
+                                                    transition:
+                                                      "transform 0.2s ease 0s, opacity 0.2s ease 0s",
+                                                    transform:
+                                                      "translateY(0px) translateZ(0px)",
+                                                    opacity: 1,
+                                                    pointerEvents: "none",
+                                                  }}
+                                                >
+                                                  8
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="_1e0c1txw _kqswstnw _1xi2u2gc _154i1ssb _t9ec1i34">
+                      <div
+                        class="agility-column-menu-meatball"
+                        data-test-id="platform-board-kit.common.ui.column-header.header.meatball"
+                      >
+                        <div class="sc-11ovnr3-0 itbugx">
+                          <button
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            aria-label="To Do column"
+                            class="css-9snh2d"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <span class="css-bwxjrz">
+                              <span
+                                role="img"
+                                aria-label="more"
+                                class="css-snhnyn"
+                                style={{
+                                  "--icon-primary-color": "currentColor",
+                                  "--icon-secondary-color":
+                                    "var(--ds-surface, #FFFFFF)",
+                                }}
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  role="presentation"
+                                >
+                                  <g fill="currentColor" fill-rule="evenodd">
+                                    <circle cx="5" cy="12" r="2"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <circle cx="19" cy="12" r="2"></circle>
+                                  </g>
+                                </svg>
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-testid="software-board.board-container.board.virtual-board.fast-virtual-list.fast-virtual-list-wrapper"
+                  class="_kqswh2mm _18s81jus _njlpp9nq _16jlkb7n"
+                  style={{
+                    minHeight: "986px",
+                    backgroundColor: "var(--ds-surface-sunken, #F4F5F7)",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div
+                      data-testid="software-board.board-container.board.card-container.card-with-icc"
+                      class="_1e0c1ule"
+                    >
+                      <div
+                        data-testid="platform-inline-card-create.ui.container"
+                        class="css-1uddfbi"
+                      >
+                        <div class="css-k5cxwk">
+                          <div class="_1e0c1ule _kqswh2mm _1pbykb7n _18s8p5ac _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _12ji1r31 _1qu2glyw _12y31o36 _4t3iu2gc _1bsb1osq _bfhk18uv _tzy4idpf _d0altlke _11om1wwu _7psyfnf5 _1uy0fnf5 _bir2q7pw _1pjhtlke _1mygkb7n _qj9aglyw">
+                            <div role="presentation">
+                              <button
+                                data-testid="platform-inline-card-create.ui.trigger.hidden.button"
+                                class="_1e0c1ule _kqswstnw _t9ec1c9r _1pbykb7n _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _12ji1r31 _1qu2glyw _12y31o36 _4t3iv47k _1bsbv47k _19itglyw _2rko1sit _bfhkq17z _80om1kw7"
+                              >
+                                <div class="css-pt8lsv">
+                                  <span
+                                    role="img"
+                                    aria-label="Create issue"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color":
+                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <path
+                                        d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                            <div class="css-136fdla"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="sc-7ay0j8-0 bKMlNz"
+                        id="card-AIR-14"
+                        data-component-selector="platform-board-kit.ui.card-container"
+                        data-testid="platform-board-kit.ui.card.card"
+                        aria-describedby="card-description-AIR-14"
+                        tabindex="-1"
+                      >
+                        <div data-testid="software-context-menu.ui.context-menu.children-wrapper">
+                          <div
+                            class="sc-14m9v6d-1 fSmxvu"
+                            tabindex="0"
+                            data-test-id="platform-card.ui.card.focus-container"
+                            draggable="true"
+                            data-drop-target-for-element="true"
+                          >
+                            <div class="yse7za_content y8i3hb-1 bSnaPG">
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1bsb1osq _4t3i1osq _1x82h2mm _155o1qbz _ogi71qbz _1uv97079 _cbvav77o _p2gzr5cr _2hwxxy5q"
+                                  style={{ "--_4sdc78": 3 }}
+                                >
+                                  <div
+                                    data-component-selector="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    data-testid="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    class="_1bsb1osq _9m3z1osq _d8r5idpf _184sidpf _17mnidpf _slfnidpf _rtpfidpf"
+                                  >
+                                    <div role="presentation">
+                                      <div
+                                        data-testid="issue-field-summary-inline-edit.ui.read"
+                                        class="_2rko1y44 _ca0q1b66 _n3td1b66 _19bvidpf _u5f3idpf _19pkr5cr _otyrr5cr _18u0idpf _2hwxidpf _19itglyw _11q7glyw _y3gn1kw7 _1bsb1osq _1wyb1kw7 _vwz48sxn _vchh1kw7 _syaz1kw7 _dntb1kw7 _1x851nu9 _1a97glyw _18oyglyw _128oglyw _1ae2glyw _192yglyw _1ryf1nu9 _fyi61nu9 _f8hb1nu9 _1ont1nu9 _83tc1nu9 _1n4l1nu9 _5kl118uv _18jl18uv _iovq18uv _1ewb8stv _1oki8stv _1o4c8stv _1mcunqa1 _52v6nqa1 _156bnqa1"
+                                      >
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.static-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          Enable "Forgot Password" comment: See
+                                          Login Page
+                                        </span>
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.editable-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          Enable "Forgot Password" comment: See
+                                          Login Page
+                                        </span>
+                                        <span class="_kqswh2mm">
+                                          <div
+                                            data-component-selector="issue-field-summary-inline-edit.ui.read.edit-icon"
+                                            class="_16jlidpf _1o9zidpf _i0dlexct _kqswstnw _154iidpf _1ltvidpf _t9ecl1km"
+                                          >
+                                            <div role="presentation">
+                                              <button
+                                                class="_btpd9bua _w1ap9bua _axtob3bt _1uoz1ule css-9snh2d"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <span class="css-bwxjrz">
+                                                  <span
+                                                    data-testid="issue-field-summary-inline-edit.ui.read.edit-edit-filled-icon"
+                                                    role="img"
+                                                    aria-label="Edit Summary"
+                                                    class="css-1wits42"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "currentColor",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-surface, #FFFFFF)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <path
+                                                        d="M4.02 19.23a1 1 0 001.18 1.18l3.81-.78-4.21-4.21-.78 3.81zM19.844 6.707l-2.12-2.122A1.997 1.997 0 0016.308 4c-.512 0-1.024.195-1.415.585l-9.757 9.758 4.95 4.95 9.757-9.758a2 2 0 000-2.828z"
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      ></path>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1e0c11p5 _1bsb1osq _zulpoqx6 _1tke1f4h _2z05hkll _yv0e1xhj _1lmc1r3e yse7za_footer"
+                                  style={{
+                                    "--_o48r1v":
+                                      '"yse7za_primary yse7za_tertiary yse7za_secondary"',
+                                  }}
+                                >
+                                  <div class="yse7za_footerChildSection y8i3hb-6 bdNWj">
+                                    <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                                      <div role="presentation">
+                                        <img
+                                          class="sc-1j9o0vm-0 dMMVlq"
+                                          alt="Task"
+                                          src="/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                                      <div role="presentation">
+                                        <a
+                                          class="sc-15cfu5s-0 kshFWQ"
+                                          href="/browse/AIR-14"
+                                          target="_blank"
+                                        >
+                                          <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">
+                                            AIR-14
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="yse7za_footerChildSection y8i3hb-8 iarmCU">
+                                    <div class="e1ln4w-0 eWrDab">
+                                      <div
+                                        data-testid="software-board.board-container.board.card-container.card.story-point-field.wrapper"
+                                        class="_16jlkb7n _1o9zkb7n _i0dlf1ug _4cvr1h6o _1pxtutpp _1idistnw _gs1n1qbz _13jz1txw _bssb1txw _1mhz1txw _1mi81txw _1e0cglyw _gx371q9c _1bt612gs _1bb7idpf _wv4j1n1a _1nf9idpf _4t3i1f4h"
+                                        style={{ "--_4sdc78": 3 }}
+                                      >
+                                        <div class="_1bchidpf _1yb1idpf _79paidpf _1rhwidpf _d8r5idpf _vdof18uv _11j3glyw _1yqt24b2 _o56l44jv _1w2r1i6y _1vza1i6y _skol1r31 _b0x6glyw _1qodidpf">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button
+                                                    aria-label="Edit"
+                                                    type="button"
+                                                    class="css-g2hnkr"
+                                                  ></button>
+                                                  <div
+                                                    role="presentation"
+                                                    data-read-view-fit-container-width="false"
+                                                    class="css-1p15jwl"
+                                                  >
+                                                    <div
+                                                      data-component-selector="jira-issue-field-inline-edit-read-view-container"
+                                                      class="_1ltvidpf _ca0qt94y _19pkidpf"
+                                                    >
+                                                      <div
+                                                        data-testid="issue-field-number-inline-edit-readview.ui.wrapper"
+                                                        class="_19itj1ic"
+                                                      >
+                                                        <div
+                                                          data-testid="issue-field-number-inline-edit-readview.ui.hover-container"
+                                                          class="_80omtlke _1lgibn51"
+                                                        >
+                                                          <span
+                                                            data-testid="issue-field-number-inline-edit-readview.ui.badge"
+                                                            class="css-6jr8tc"
+                                                          >
+                                                            <span class="css-1lt331k">
+                                                              -
+                                                            </span>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="y8i3hb-7 kenoZY">
+                                    <div
+                                      role="button"
+                                      data-testid="software-board.board-container.board.card-container.card.assignee-field.button"
+                                      class="_80omtlke _1gp47079 _1di41qbz"
+                                      style={{ "--_4sdc78": 3 }}
+                                    >
+                                      <button class="sc-1bi5d3z-0 kCbgkb">
+                                        <div class="_1bsb1f4h _4t3i1f4h _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _vchhusvi _80om73ad">
+                                          <div role="presentation">
+                                            <div
+                                              data-testid="issue-field-assignee.common.ui.read-view.popover.avatar"
+                                              role="img"
+                                              aria-labelledby="395val-avatar-label"
+                                              style={{
+                                                display: "inline-block",
+                                                position: "relative",
+                                                outline: "0px",
+                                              }}
+                                            >
+                                              <span
+                                                class="css-vnrk9l"
+                                                data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--inner"
+                                              >
+                                                <span class="css-14m39g1">
+                                                  <span
+                                                    data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--person"
+                                                    aria-hidden="true"
+                                                    class="css-snhnyn"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-icon-subtle, #8993A4)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <g
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      >
+                                                        <path d="M6 14c0-1.105.902-2 2.009-2h7.982c1.11 0 2.009.894 2.009 2.006v4.44c0 3.405-12 3.405-12 0V14z"></path>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="7"
+                                                          r="4"
+                                                        ></circle>
+                                                      </g>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                              <span
+                                                id="395val-avatar-label"
+                                                hidden=""
+                                              >
+                                                Unassigned
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="sc-14m9v6d-0 eUgeYm"
+                              data-test-id="platform-card.ui.card.actions-section"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-label='More actions for AIR-14 Enable "Forgot Password" comment: See Login Page'
+                                class="css-udno6l"
+                                data-testid="software-context-menu.meatball-menu"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span class="css-bwxjrz">
+                                  <span
+                                    aria-hidden="true"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color": "currentColor",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <g
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      >
+                                        <circle cx="5" cy="12" r="2"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <circle cx="19" cy="12" r="2"></circle>
+                                      </g>
+                                    </svg>
+                                  </span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="software-context-menu.ui.context-menu"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="_kqswstnw"
+                          style={{
+                            "--_16yv8lz": "0px",
+                            "--_1fbn7yv": "0px",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "108.8px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div
+                      data-testid="software-board.board-container.board.card-container.card-with-icc"
+                      class="_1e0c1ule"
+                    >
+                      <span class="sc-bxivhb kZJusk">
+                        <div
+                          data-testid="platform-inline-card-create.ui.container"
+                          class="css-1uddfbi"
+                        >
+                          <div class="css-k5cxwk">
+                            <div class="_1e0c1ule _kqswh2mm _1pbykb7n _18s8p5ac _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _12ji1r31 _1qu2glyw _12y31o36 _4t3iu2gc _1bsb1osq _bfhk18uv _tzy4idpf _d0altlke _11om1wwu _7psyfnf5 _1uy0fnf5 _bir2q7pw _1pjhtlke _1mygkb7n _qj9aglyw">
+                              <div role="presentation">
+                                <button
+                                  data-testid="platform-inline-card-create.ui.trigger.hidden.button"
+                                  class="_1e0c1ule _kqswstnw _t9ec1c9r _1pbykb7n _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _12ji1r31 _1qu2glyw _12y31o36 _4t3iv47k _1bsbv47k _19itglyw _2rko1sit _bfhkq17z _80om1kw7"
+                                >
+                                  <div class="css-pt8lsv">
+                                    <span
+                                      role="img"
+                                      aria-label="Create issue"
+                                      class="css-snhnyn"
+                                      style={{
+                                        "--icon-primary-color":
+                                          "var(--ds-icon-inverse, #FFFFFF)",
+                                        "--icon-secondary-color":
+                                          "var(--ds-surface, #FFFFFF)",
+                                      }}
+                                    >
+                                      <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        role="presentation"
+                                      >
+                                        <path
+                                          d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                                          fill="currentColor"
+                                          fill-rule="evenodd"
+                                        ></path>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </button>
+                              </div>
+                              <div class="css-136fdla"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </span>
+                      <div
+                        class="hu52hy-0 gycBVK"
+                        data-testid="onboarding-quickstart-core.common.ui.instrumented-nudge-spotlight-card.scroll-to-nudge"
+                        aria-hidden="true"
+                      ></div>
+                      <div
+                        class="sc-7ay0j8-0 bKMlNz"
+                        id="card-AIR-15"
+                        data-component-selector="platform-board-kit.ui.card-container"
+                        data-testid="platform-board-kit.ui.card.card"
+                        aria-describedby="card-description-AIR-15"
+                        tabindex="-1"
+                      >
+                        <div data-testid="software-context-menu.ui.context-menu.children-wrapper">
+                          <div
+                            class="sc-14m9v6d-1 fSmxvu"
+                            tabindex="0"
+                            data-test-id="platform-card.ui.card.focus-container"
+                            draggable="true"
+                            data-drop-target-for-element="true"
+                          >
+                            <div class="yse7za_content y8i3hb-1 bSnaPG">
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1bsb1osq _4t3i1osq _1x82h2mm _155o1qbz _ogi71qbz _1uv97079 _cbvav77o _p2gzr5cr _2hwxxy5q"
+                                  style={{ "--_4sdc78": "3" }}
+                                >
+                                  <div
+                                    data-component-selector="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    data-testid="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    class="_1bsb1osq _9m3z1osq _d8r5idpf _184sidpf _17mnidpf _slfnidpf _rtpfidpf"
+                                  >
+                                    <div role="presentation">
+                                      <div
+                                        data-testid="issue-field-summary-inline-edit.ui.read"
+                                        class="_2rko1y44 _ca0q1b66 _n3td1b66 _19bvidpf _u5f3idpf _19pkr5cr _otyrr5cr _18u0idpf _2hwxidpf _19itglyw _11q7glyw _y3gn1kw7 _1bsb1osq _1wyb1kw7 _vwz48sxn _vchh1kw7 _syaz1kw7 _dntb1kw7 _1x851nu9 _1a97glyw _18oyglyw _128oglyw _1ae2glyw _192yglyw _1ryf1nu9 _fyi61nu9 _f8hb1nu9 _1ont1nu9 _83tc1nu9 _1n4l1nu9 _5kl118uv _18jl18uv _iovq18uv _1ewb8stv _1oki8stv _1o4c8stv _1mcunqa1 _52v6nqa1 _156bnqa1"
+                                      >
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.static-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          To create new flight, cannot customize
+                                          Parent Airline (Under Review)
+                                        </span>
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.editable-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          To create new flight, cannot customize
+                                          Parent Airline (Under Review)
+                                        </span>
+                                        <span class="_kqswh2mm">
+                                          <div
+                                            data-component-selector="issue-field-summary-inline-edit.ui.read.edit-icon"
+                                            class="_16jlidpf _1o9zidpf _i0dlexct _kqswstnw _154iidpf _1ltvidpf _t9ecl1km"
+                                          >
+                                            <div role="presentation">
+                                              <button
+                                                class="_btpd9bua _w1ap9bua _axtob3bt _1uoz1ule css-9snh2d"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <span class="css-bwxjrz">
+                                                  <span
+                                                    data-testid="issue-field-summary-inline-edit.ui.read.edit-edit-filled-icon"
+                                                    role="img"
+                                                    aria-label="Edit Summary"
+                                                    class="css-1wits42"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "currentColor",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-surface, #FFFFFF)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <path
+                                                        d="M4.02 19.23a1 1 0 001.18 1.18l3.81-.78-4.21-4.21-.78 3.81zM19.844 6.707l-2.12-2.122A1.997 1.997 0 0016.308 4c-.512 0-1.024.195-1.415.585l-9.757 9.758 4.95 4.95 9.757-9.758a2 2 0 000-2.828z"
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      ></path>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1e0c11p5 _1bsb1osq _zulpoqx6 _1tke1f4h _2z05hkll _yv0e1xhj _1lmc1r3e yse7za_footer"
+                                  style={{
+                                    "--_o48r1v":
+                                      '"yse7za_primary yse7za_tertiary yse7za_secondary"',
+                                  }}
+                                >
+                                  <div class="yse7za_footerChildSection y8i3hb-6 bdNWj">
+                                    <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                                      <div role="presentation">
+                                        <img
+                                          class="sc-1j9o0vm-0 dMMVlq"
+                                          alt="Task"
+                                          src="/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                                      <div role="presentation">
+                                        <a
+                                          class="sc-15cfu5s-0 kshFWQ"
+                                          href="/browse/AIR-15"
+                                          target="_blank"
+                                        >
+                                          <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">
+                                            AIR-15
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="yse7za_footerChildSection y8i3hb-8 iarmCU">
+                                    <div class="e1ln4w-0 eWrDab">
+                                      <div
+                                        data-testid="software-board.board-container.board.card-container.card.story-point-field.wrapper"
+                                        class="_16jlkb7n _1o9zkb7n _i0dlf1ug _4cvr1h6o _1pxtutpp _1idistnw _gs1n1qbz _13jz1txw _bssb1txw _1mhz1txw _1mi81txw _1e0cglyw _gx371q9c _1bt612gs _1bb7idpf _wv4j1n1a _1nf9idpf _4t3i1f4h"
+                                        style={{ "--_4sdc78": "3" }}
+                                      >
+                                        <div class="_1bchidpf _1yb1idpf _79paidpf _1rhwidpf _d8r5idpf _vdof18uv _11j3glyw _1yqt24b2 _o56l44jv _1w2r1i6y _1vza1i6y _skol1r31 _b0x6glyw _1qodidpf">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button
+                                                    aria-label="Edit"
+                                                    type="button"
+                                                    class="css-g2hnkr"
+                                                  ></button>
+                                                  <div
+                                                    role="presentation"
+                                                    data-read-view-fit-container-width="false"
+                                                    class="css-1p15jwl"
+                                                  >
+                                                    <div
+                                                      data-component-selector="jira-issue-field-inline-edit-read-view-container"
+                                                      class="_1ltvidpf _ca0qt94y _19pkidpf"
+                                                    >
+                                                      <div
+                                                        data-testid="issue-field-number-inline-edit-readview.ui.wrapper"
+                                                        class="_19itj1ic"
+                                                      >
+                                                        <div
+                                                          data-testid="issue-field-number-inline-edit-readview.ui.hover-container"
+                                                          class="_80omtlke _1lgibn51"
+                                                        >
+                                                          <span
+                                                            data-testid="issue-field-number-inline-edit-readview.ui.badge"
+                                                            class="css-6jr8tc"
+                                                          >
+                                                            <span class="css-1lt331k">
+                                                              -
+                                                            </span>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="y8i3hb-7 kenoZY">
+                                    <div
+                                      role="button"
+                                      data-testid="software-board.board-container.board.card-container.card.assignee-field.button"
+                                      class="_80omtlke _1gp47079 _1di41qbz"
+                                      style={{ "--_4sdc78": "3" }}
+                                    >
+                                      <button class="sc-1bi5d3z-0 kCbgkb">
+                                        <div class="_1bsb1f4h _4t3i1f4h _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _vchhusvi _80om73ad">
+                                          <div role="presentation">
+                                            <div
+                                              data-testid="issue-field-assignee.common.ui.read-view.popover.avatar"
+                                              role="img"
+                                              aria-labelledby="367val-avatar-label"
+                                              style={{
+                                                display: "inline-block",
+                                                position: "relative",
+                                                outline: "0px",
+                                              }}
+                                            >
+                                              <span
+                                                class="css-vnrk9l"
+                                                data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--inner"
+                                              >
+                                                <span class="css-14m39g1">
+                                                  <span
+                                                    data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--person"
+                                                    aria-hidden="true"
+                                                    class="css-snhnyn"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-icon-subtle, #8993A4)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <g
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      >
+                                                        <path d="M6 14c0-1.105.902-2 2.009-2h7.982c1.11 0 2.009.894 2.009 2.006v4.44c0 3.405-12 3.405-12 0V14z"></path>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="7"
+                                                          r="4"
+                                                        ></circle>
+                                                      </g>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                              <span
+                                                id="367val-avatar-label"
+                                                hidden=""
+                                              >
+                                                Unassigned
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="sc-14m9v6d-0 eUgeYm"
+                              data-test-id="platform-card.ui.card.actions-section"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-label="More actions for AIR-15 To create new flight, cannot customize Parent Airline (Under Review)"
+                                class="css-udno6l"
+                                data-testid="software-context-menu.meatball-menu"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span class="css-bwxjrz">
+                                  <span
+                                    aria-hidden="true"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color": "currentColor",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <g
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      >
+                                        <circle cx="5" cy="12" r="2"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <circle cx="19" cy="12" r="2"></circle>
+                                      </g>
+                                    </svg>
+                                  </span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="software-context-menu.ui.context-menu"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="_kqswstnw"
+                          style={{
+                            "--_16yv8lz": "0px",
+                            "--_1fbn7yv": "0px",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "237.6px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div
+                      data-testid="software-board.board-container.board.card-container.card-with-icc"
+                      class="_1e0c1ule"
+                    >
+                      <div
+                        data-testid="platform-inline-card-create.ui.container"
+                        class="css-1uddfbi"
+                      >
+                        <div class="css-k5cxwk">
+                          <div class="_1e0c1ule _kqswh2mm _1pbykb7n _18s8p5ac _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _12ji1r31 _1qu2glyw _12y31o36 _4t3iu2gc _1bsb1osq _bfhk18uv _tzy4idpf _d0altlke _11om1wwu _7psyfnf5 _1uy0fnf5 _bir2q7pw _1pjhtlke _1mygkb7n _qj9aglyw">
+                            <div role="presentation">
+                              <button
+                                data-testid="platform-inline-card-create.ui.trigger.hidden.button"
+                                class="_1e0c1ule _kqswstnw _t9ec1c9r _1pbykb7n _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _12ji1r31 _1qu2glyw _12y31o36 _4t3iv47k _1bsbv47k _19itglyw _2rko1sit _bfhkq17z _80om1kw7"
+                              >
+                                <div class="css-pt8lsv">
+                                  <span
+                                    role="img"
+                                    aria-label="Create issue"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color":
+                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <path
+                                        d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                            <div class="css-136fdla"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="sc-7ay0j8-0 bKMlNz"
+                        id="card-AIR-16"
+                        data-component-selector="platform-board-kit.ui.card-container"
+                        data-testid="platform-board-kit.ui.card.card"
+                        aria-describedby="card-description-AIR-16"
+                        tabindex="-1"
+                      >
+                        <div data-testid="software-context-menu.ui.context-menu.children-wrapper">
+                          <div
+                            class="sc-14m9v6d-1 fSmxvu"
+                            tabindex="0"
+                            data-test-id="platform-card.ui.card.focus-container"
+                            draggable="true"
+                            data-drop-target-for-element="true"
+                          >
+                            <div class="yse7za_content y8i3hb-1 bSnaPG">
+                              <div class="y8i3hb-0 kvmZCr">
+                                <span class="_slp31hna _1i4q1hna _1nmz1hna _u5f3zwfg _1yyjn7od _1e0c1nu9 _1reon7od _18m9n7od _sudpn7od yse7za_summary">
+                                  North American market under forecast data: No
+                                  enough historical data for route to forecast
+                                </span>
+                              </div>
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1e0c11p5 _1bsb1osq _zulpoqx6 _1tke1f4h _2z05hkll _yv0e1xhj _1lmc1r3e yse7za_footer"
+                                  style={{
+                                    "--_o48r1v":
+                                      '"yse7za_primary yse7za_tertiary yse7za_secondary"',
+                                  }}
+                                >
+                                  <div class="yse7za_footerChildSection y8i3hb-6 bdNWj">
+                                    <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                                      <div role="presentation">
+                                        <img
+                                          class="sc-1j9o0vm-0 dMMVlq"
+                                          alt="Task"
+                                          src="/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                                      <div role="presentation">
+                                        <a
+                                          class="sc-15cfu5s-0 kshFWQ"
+                                          href="/browse/AIR-16"
+                                          target="_blank"
+                                        >
+                                          <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">
+                                            AIR-16
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="yse7za_footerChildSection y8i3hb-8 iarmCU">
+                                    <div class="e1ln4w-0 eWrDab"></div>
+                                  </div>
+                                  <div class="y8i3hb-7 kenoZY">
+                                    <div
+                                      data-testid="software-board.common.fields.assignee-field-static.avatar-wrapper"
+                                      class="_4t3i1f4h _80om73ad"
+                                    >
+                                      <div role="presentation">
+                                        <div
+                                          role="img"
+                                          aria-labelledby="329val-avatar-label"
+                                          style={{
+                                            display: "inline-block",
+                                            position: "relative",
+                                            outline: "0px",
+                                          }}
+                                        >
+                                          <span class="css-vnrk9l">
+                                            <span class="css-14m39g1">
+                                              <span
+                                                aria-hidden="true"
+                                                class="css-snhnyn"
+                                                style={{
+                                                  "--icon-primary-color":
+                                                    "var(--ds-icon-inverse, #FFFFFF)",
+                                                  "--icon-secondary-color":
+                                                    "var(--ds-icon-subtle, #8993A4)",
+                                                }}
+                                              >
+                                                <svg
+                                                  width="24"
+                                                  height="24"
+                                                  viewBox="0 0 24 24"
+                                                  role="presentation"
+                                                >
+                                                  <g
+                                                    fill="currentColor"
+                                                    fill-rule="evenodd"
+                                                  >
+                                                    <path d="M6 14c0-1.105.902-2 2.009-2h7.982c1.11 0 2.009.894 2.009 2.006v4.44c0 3.405-12 3.405-12 0V14z"></path>
+                                                    <circle
+                                                      cx="12"
+                                                      cy="7"
+                                                      r="4"
+                                                    ></circle>
+                                                  </g>
+                                                </svg>
+                                              </span>
+                                            </span>
+                                          </span>
+                                          <span
+                                            id="329val-avatar-label"
+                                            hidden=""
+                                          >
+                                            Unassigned
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="software-context-menu.ui.context-menu"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="_kqswstnw"
+                          style={{
+                            "--_16yv8lz": "0px",
+                            "--_1fbn7yv": "0px",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-1hc9cht-0 eIJaZP"
+            data-component-selector="platform-board-kit.ui.column.draggable-column"
+            data-testid="platform-board-kit.ui.column.draggable-column.styled-wrapper"
+            draggable="true"
+            data-drop-target-for-element="true"
+          >
+            <div class="sc-1hc9cht-1 FxHxE">
+              <div class="__board-test-hook__column sc-1ef3ied-1 cgwwdw j4whmj-0 gftcoT">
+                <div class="sc-1xtha37-1 hSyVYa sc-1xtha37-0 hpIWPi">
+                  <div
+                    class="sc-1k8t1g3-0 letSNF"
+                    data-testid="platform-board-kit.common.ui.column-header.header.column-header-container"
+                  >
+                    <div
+                      class="_1e0c1txw _2lx21bp4 _1n261q9c _1bah1h6o _4cvr1fhb _16jlkb7n _1o9zkb7n _i0dl1wug _1wpz1wug _p12f1osq _7ehi2jkb _nt751r31 _49pcglyw _1hvw1o36 _1yt4iq2b _1bsb1osq _4t3is4d4"
+                      style={{
+                        "--_6nps2s": "var(--ds-space-200, 16px) 0",
+                        "--_16ia0uc": "calc(100% - var(--ds-space-400, 32px))",
+                      }}
+                    >
+                      <div class="sc-1wvkof1-2 dXSenY">
+                        <div class="sc-1wvkof1-3 fiqzkn">
+                          <div class="sc-1dbmt9d-0 kSUAZi">
+                            <form>
+                              <div class="css-q5x77e">
+                                <div class="css-1v0cd8t">
+                                  <button
+                                    aria-label="Edit "
+                                    type="button"
+                                    class="css-g2hnkr"
+                                  ></button>
+                                  <div
+                                    role="presentation"
+                                    data-read-view-fit-container-width="true"
+                                    class="css-u3i0v"
+                                  >
+                                    <div class="_1ul9idpf _1e0c1txw _4cvr1h6o">
+                                      <h2
+                                        class="__board-test-hook__column-title j-BFpW_compactColumnTitle rj51p4-0 eddmWW"
+                                        aria-label="In Progress"
+                                        data-test-id="platform-board-kit.common.ui.column-header.editable-title.column-title.column-title"
+                                        data-component-selector="platform-board-kit.ui.column-title"
+                                      >
+                                        <div
+                                          class="rj51p4-1 jbcAnp"
+                                          title="In Progress"
+                                        >
+                                          In Progress
+                                        </div>
+                                        <div class="_1e0c1txw _18u01b66">
+                                          <div class="_syaz1rc1 _1ul9idpf _16jlidpf _1o9zidpf _2hwx1b66">
+                                            <span style={{ whiteSpace: "pre" }}>
+                                              <span
+                                                style={{
+                                                  position: "relative",
+                                                  display: "inline-block",
+                                                }}
+                                              >
+                                                <span
+                                                  style={{
+                                                    visibility: "hidden",
+                                                  }}
+                                                >
+                                                  8
+                                                </span>
+                                                <span
+                                                  style={{
+                                                    display: "inline-block",
+                                                    position: "absolute",
+                                                    left: "0px",
+                                                    transition:
+                                                      "transform 0.2s ease 0s, opacity 0.2s ease 0s",
+                                                    transform:
+                                                      "translateY(0px) translateZ(0px)",
+                                                    opacity: 1,
+                                                    pointerEvents: "none",
+                                                  }}
+                                                >
+                                                  8
+                                                </span>
+                                              </span>
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="_1e0c1txw _kqswstnw _1xi2u2gc _154i1ssb _t9ec1i34">
+                      <div
+                        class="agility-column-menu-meatball"
+                        data-test-id="platform-board-kit.common.ui.column-header.header.meatball"
+                      >
+                        <div class="sc-11ovnr3-0 itbugx">
+                          <span class="sc-bxivhb kZJusk">
+                            <button
+                              aria-expanded="false"
+                              aria-haspopup="true"
+                              aria-label="In Progress column"
+                              class="css-9snh2d"
+                              tabindex="0"
+                              type="button"
+                            >
+                              <span class="css-bwxjrz">
+                                <span
+                                  role="img"
+                                  aria-label="more"
+                                  class="css-snhnyn"
+                                  style={{
+                                    "--icon-primary-color": "currentColor",
+                                    "--icon-secondary-color":
+                                      "var(--ds-surface, #FFFFFF)",
+                                  }}
+                                >
+                                  <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    role="presentation"
+                                  >
+                                    <g fill="currentColor" fill-rule="evenodd">
+                                      <circle cx="5" cy="12" r="2"></circle>
+                                      <circle cx="12" cy="12" r="2"></circle>
+                                      <circle cx="19" cy="12" r="2"></circle>
+                                    </g>
+                                  </svg>
+                                </span>
+                              </span>
+                            </button>
+                          </span>
+                          <div
+                            class="hu52hy-0 gycBVK"
+                            data-testid="onboarding-quickstart-core.common.ui.instrumented-nudge-spotlight-card.scroll-to-nudge"
+                            aria-hidden="true"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-testid="software-board.board-container.board.virtual-board.fast-virtual-list.fast-virtual-list-wrapper"
+                  class="_kqswh2mm _18s81jus _njlpp9nq _16jlkb7n"
+                  style={{
+                    minHeight: "986px",
+                    backgroundColor: "var(--ds-surface-sunken, #F4F5F7)",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div
+                      data-testid="software-board.board-container.board.card-container.card-with-icc"
+                      class="_1e0c1ule"
+                    >
+                      <div
+                        data-testid="platform-inline-card-create.ui.container"
+                        class="css-1uddfbi"
+                      >
+                        <div class="css-k5cxwk">
+                          <div class="_1e0c1ule _kqswh2mm _1pbykb7n _18s8p5ac _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _12ji1r31 _1qu2glyw _12y31o36 _4t3iu2gc _1bsb1osq _bfhk18uv _tzy4idpf _d0altlke _11om1wwu _7psyfnf5 _1uy0fnf5 _bir2q7pw _1pjhtlke _1mygkb7n _qj9aglyw">
+                            <div role="presentation">
+                              <button
+                                data-testid="platform-inline-card-create.ui.trigger.hidden.button"
+                                class="_1e0c1ule _kqswstnw _t9ec1c9r _1pbykb7n _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _12ji1r31 _1qu2glyw _12y31o36 _4t3iv47k _1bsbv47k _19itglyw _2rko1sit _bfhkq17z _80om1kw7"
+                              >
+                                <div class="css-pt8lsv">
+                                  <span
+                                    role="img"
+                                    aria-label="Create issue"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color":
+                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <path
+                                        d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                            <div class="css-136fdla"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="sc-7ay0j8-0 bKMlNz"
+                        id="card-AIR-13"
+                        data-component-selector="platform-board-kit.ui.card-container"
+                        data-testid="platform-board-kit.ui.card.card"
+                        aria-describedby="card-description-AIR-13"
+                        tabindex="-1"
+                      >
+                        <div data-testid="software-context-menu.ui.context-menu.children-wrapper">
+                          <div
+                            class="sc-14m9v6d-1 fSmxvu"
+                            tabindex="0"
+                            data-test-id="platform-card.ui.card.focus-container"
+                            draggable="true"
+                            data-drop-target-for-element="true"
+                          >
+                            <div class="yse7za_content y8i3hb-1 bSnaPG">
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1bsb1osq _4t3i1osq _1x82h2mm _155o1qbz _ogi71qbz _1uv97079 _cbvav77o _p2gzr5cr _2hwxxy5q"
+                                  style={{ "--_4sdc78": "3" }}
+                                >
+                                  <div
+                                    data-component-selector="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    data-testid="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    class="_1bsb1osq _9m3z1osq _d8r5idpf _184sidpf _17mnidpf _slfnidpf _rtpfidpf"
+                                  >
+                                    <div role="presentation">
+                                      <div
+                                        data-testid="issue-field-summary-inline-edit.ui.read"
+                                        class="_2rko1y44 _ca0q1b66 _n3td1b66 _19bvidpf _u5f3idpf _19pkr5cr _otyrr5cr _18u0idpf _2hwxidpf _19itglyw _11q7glyw _y3gn1kw7 _1bsb1osq _1wyb1kw7 _vwz48sxn _vchh1kw7 _syaz1kw7 _dntb1kw7 _1x851nu9 _1a97glyw _18oyglyw _128oglyw _1ae2glyw _192yglyw _1ryf1nu9 _fyi61nu9 _f8hb1nu9 _1ont1nu9 _83tc1nu9 _1n4l1nu9 _5kl118uv _18jl18uv _iovq18uv _1ewb8stv _1oki8stv _1o4c8stv _1mcunqa1 _52v6nqa1 _156bnqa1"
+                                      >
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.static-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          Done but IT MUST BE TESTED ONLY :from
+                                          results of 'Market Data-&gt;Forecast
+                                          Data results, need one button to
+                                          “expand all“ (similar to what has been
+                                          applied under 'Market
+                                          Data-&gt;Historica Data')
+                                        </span>
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.editable-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          Done but IT MUST BE TESTED ONLY :from
+                                          results of 'Market Data-&gt;Forecast
+                                          Data results, need one button to
+                                          “expand all“ (similar to what has been
+                                          applied under 'Market
+                                          Data-&gt;Historica Data')
+                                        </span>
+                                        <span class="_kqswh2mm">
+                                          <div
+                                            data-component-selector="issue-field-summary-inline-edit.ui.read.edit-icon"
+                                            class="_16jlidpf _1o9zidpf _i0dlexct _kqswstnw _154iidpf _1ltvidpf _t9ecl1km"
+                                          >
+                                            <div role="presentation">
+                                              <button
+                                                class="_btpd9bua _w1ap9bua _axtob3bt _1uoz1ule css-9snh2d"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <span class="css-bwxjrz">
+                                                  <span
+                                                    data-testid="issue-field-summary-inline-edit.ui.read.edit-edit-filled-icon"
+                                                    role="img"
+                                                    aria-label="Edit Summary"
+                                                    class="css-1wits42"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "currentColor",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-surface, #FFFFFF)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <path
+                                                        d="M4.02 19.23a1 1 0 001.18 1.18l3.81-.78-4.21-4.21-.78 3.81zM19.844 6.707l-2.12-2.122A1.997 1.997 0 0016.308 4c-.512 0-1.024.195-1.415.585l-9.757 9.758 4.95 4.95 9.757-9.758a2 2 0 000-2.828z"
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      ></path>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1e0c11p5 _1bsb1osq _zulpoqx6 _1tke1f4h _2z05hkll _yv0e1xhj _1lmc1r3e yse7za_footer"
+                                  style={{
+                                    "--_o48r1v":
+                                      '"yse7za_primary yse7za_tertiary yse7za_secondary"',
+                                  }}
+                                >
+                                  <div class="yse7za_footerChildSection y8i3hb-6 bdNWj">
+                                    <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                                      <div role="presentation">
+                                        <img
+                                          class="sc-1j9o0vm-0 dMMVlq"
+                                          alt="Task"
+                                          src="/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                                      <div role="presentation">
+                                        <a
+                                          class="sc-15cfu5s-0 kshFWQ"
+                                          href="/browse/AIR-13"
+                                          target="_blank"
+                                        >
+                                          <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">
+                                            AIR-13
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="yse7za_footerChildSection y8i3hb-8 iarmCU">
+                                    <div class="e1ln4w-0 eWrDab">
+                                      <div
+                                        data-testid="software-board.board-container.board.card-container.card.story-point-field.wrapper"
+                                        class="_16jlkb7n _1o9zkb7n _i0dlf1ug _4cvr1h6o _1pxtutpp _1idistnw _gs1n1qbz _13jz1txw _bssb1txw _1mhz1txw _1mi81txw _1e0cglyw _gx371q9c _1bt612gs _1bb7idpf _wv4j1n1a _1nf9idpf _4t3i1f4h"
+                                        style={{ "--_4sdc78": "3" }}
+                                      >
+                                        <div class="_1bchidpf _1yb1idpf _79paidpf _1rhwidpf _d8r5idpf _vdof18uv _11j3glyw _1yqt24b2 _o56l44jv _1w2r1i6y _1vza1i6y _skol1r31 _b0x6glyw _1qodidpf">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button
+                                                    aria-label="Edit"
+                                                    type="button"
+                                                    class="css-g2hnkr"
+                                                  ></button>
+                                                  <div
+                                                    role="presentation"
+                                                    data-read-view-fit-container-width="false"
+                                                    class="css-1p15jwl"
+                                                  >
+                                                    <div
+                                                      data-component-selector="jira-issue-field-inline-edit-read-view-container"
+                                                      class="_1ltvidpf _ca0qt94y _19pkidpf"
+                                                    >
+                                                      <div
+                                                        data-testid="issue-field-number-inline-edit-readview.ui.wrapper"
+                                                        class="_19itj1ic"
+                                                      >
+                                                        <div
+                                                          data-testid="issue-field-number-inline-edit-readview.ui.hover-container"
+                                                          class="_80omtlke _1lgibn51"
+                                                        >
+                                                          <span
+                                                            data-testid="issue-field-number-inline-edit-readview.ui.badge"
+                                                            class="css-6jr8tc"
+                                                          >
+                                                            <span class="css-1lt331k">
+                                                              -
+                                                            </span>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="y8i3hb-7 kenoZY">
+                                    <div
+                                      role="button"
+                                      data-testid="software-board.board-container.board.card-container.card.assignee-field.button"
+                                      class="_80omtlke _1gp47079 _1di41qbz"
+                                      style={{ "--_4sdc78": 3 }}
+                                    >
+                                      <button class="sc-1bi5d3z-0 kCbgkb">
+                                        <div class="_1bsb1f4h _4t3i1f4h _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _vchhusvi _80om73ad">
+                                          <div role="presentation">
+                                            <div
+                                              data-testid="issue-field-assignee.common.ui.read-view.popover.avatar"
+                                              role="img"
+                                              aria-labelledby="298val-avatar-label"
+                                              style={{
+                                                "display: inline-block, position: relative, outline": 0,
+                                              }}
+                                            >
+                                              <span
+                                                class="css-vnrk9l"
+                                                data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--inner"
+                                              >
+                                                <span class="css-14m39g1">
+                                                  <span
+                                                    data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--person"
+                                                    aria-hidden="true"
+                                                    class="css-snhnyn"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                                      "--icon-secondary-color":
+                                                        " var(--ds-icon-subtle, #8993A4)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <g
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      >
+                                                        <path d="M6 14c0-1.105.902-2 2.009-2h7.982c1.11 0 2.009.894 2.009 2.006v4.44c0 3.405-12 3.405-12 0V14z"></path>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="7"
+                                                          r="4"
+                                                        ></circle>
+                                                      </g>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                              <span
+                                                id="298val-avatar-label"
+                                                hidden=""
+                                              >
+                                                Unassigned
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="sc-14m9v6d-0 eUgeYm"
+                              data-test-id="platform-card.ui.card.actions-section"
+                            >
+                              <button
+                                aria-expanded="false"
+                                aria-haspopup="true"
+                                aria-label="More actions for AIR-13 Done but IT MUST BE TESTED ONLY :from results of 'Market Data->Forecast Data results, need one button to “expand all“ (similar to what has been applied under 'Market Data->Historica Data')"
+                                class="css-udno6l"
+                                data-testid="software-context-menu.meatball-menu"
+                                tabindex="0"
+                                type="button"
+                              >
+                                <span class="css-bwxjrz">
+                                  <span
+                                    aria-hidden="true"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color": "currentColor",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <g
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      >
+                                        <circle cx="5" cy="12" r="2"></circle>
+                                        <circle cx="12" cy="12" r="2"></circle>
+                                        <circle cx="19" cy="12" r="2"></circle>
+                                      </g>
+                                    </svg>
+                                  </span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="software-context-menu.ui.context-menu"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="_kqswstnw"
+                          style={{
+                            "--_16yv8lz": "0px",
+                            "--_1fbn7yv": "0px",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "208.8px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div
+                      data-testid="software-board.board-container.board.card-container.card-with-icc"
+                      class="_1e0c1ule"
+                    >
+                      <div
+                        data-testid="platform-inline-card-create.ui.container"
+                        class="css-1uddfbi"
+                      >
+                        <div class="css-k5cxwk">
+                          <div class="_1e0c1ule _kqswh2mm _1pbykb7n _18s8p5ac _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _19itglyw _12ji1r31 _1qu2glyw _12y31o36 _4t3iu2gc _1bsb1osq _bfhk18uv _tzy4idpf _d0altlke _11om1wwu _7psyfnf5 _1uy0fnf5 _bir2q7pw _1pjhtlke _1mygkb7n _qj9aglyw">
+                            <div role="presentation">
+                              <button
+                                data-testid="platform-inline-card-create.ui.trigger.hidden.button"
+                                class="_1e0c1ule _kqswstnw _t9ec1c9r _1pbykb7n _19pkidpf _2hwxidpf _otyridpf _18u0idpf _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _12ji1r31 _1qu2glyw _12y31o36 _4t3iv47k _1bsbv47k _19itglyw _2rko1sit _bfhkq17z _80om1kw7"
+                              >
+                                <div class="css-pt8lsv">
+                                  <span
+                                    role="img"
+                                    aria-label="Create issue"
+                                    class="css-snhnyn"
+                                    style={{
+                                      "--icon-primary-color":
+                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                      "--icon-secondary-color":
+                                        "var(--ds-surface, #FFFFFF)",
+                                    }}
+                                  >
+                                    <svg
+                                      width="24"
+                                      height="24"
+                                      viewBox="0 0 24 24"
+                                      role="presentation"
+                                    >
+                                      <path
+                                        d="M13 11V7a1 1 0 00-2 0v4H7a1 1 0 000 2h4v4a1 1 0 002 0v-4h4a1 1 0 000-2h-4z"
+                                        fill="currentColor"
+                                        fill-rule="evenodd"
+                                      ></path>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </button>
+                            </div>
+                            <div class="css-136fdla"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="sc-7ay0j8-0 bKMlNz"
+                        id="card-AIR-10"
+                        data-component-selector="platform-board-kit.ui.card-container"
+                        data-testid="platform-board-kit.ui.card.card"
+                        aria-describedby="card-description-AIR-10"
+                        tabindex="-1"
+                      >
+                        <div data-testid="software-context-menu.ui.context-menu.children-wrapper">
+                          <div
+                            class="sc-14m9v6d-1 fSmxvu"
+                            tabindex="0"
+                            data-test-id="platform-card.ui.card.focus-container"
+                            draggable="true"
+                            data-drop-target-for-element="true"
+                          >
+                            <div class="yse7za_content y8i3hb-1 bSnaPG">
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1bsb1osq _4t3i1osq _1x82h2mm _155o1qbz _ogi71qbz _1uv97079 _cbvav77o _p2gzr5cr _2hwxxy5q"
+                                  style={{ "--_4sdc78": "3" }}
+                                >
+                                  <div
+                                    data-component-selector="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    data-testid="issue-field-summary-inline-edit.ui.inline-edit-container"
+                                    class="_1bsb1osq _9m3z1osq _d8r5idpf _184sidpf _17mnidpf _slfnidpf _rtpfidpf"
+                                  >
+                                    <div role="presentation">
+                                      <div
+                                        data-testid="issue-field-summary-inline-edit.ui.read"
+                                        class="_2rko1y44 _ca0q1b66 _n3td1b66 _19bvidpf _u5f3idpf _19pkr5cr _otyrr5cr _18u0idpf _2hwxidpf _19itglyw _11q7glyw _y3gn1kw7 _1bsb1osq _1wyb1kw7 _vwz48sxn _vchh1kw7 _syaz1kw7 _dntb1kw7 _1x851nu9 _1a97glyw _18oyglyw _128oglyw _1ae2glyw _192yglyw _1ryf1nu9 _fyi61nu9 _f8hb1nu9 _1ont1nu9 _83tc1nu9 _1n4l1nu9 _5kl118uv _18jl18uv _iovq18uv _1ewb8stv _1oki8stv _1o4c8stv _1mcunqa1 _52v6nqa1 _156bnqa1"
+                                      >
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.static-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          DONE BUT PUT FOR IT a "div":Add scroll
+                                          capability to Gantt chart view
+                                        </span>
+                                        <span
+                                          data-component-selector="issue-field-summary-inline-edit.ui.read.editable-summary"
+                                          class="_slp31hna _1i4q1hna _1nmz1hna"
+                                        >
+                                          DONE BUT PUT FOR IT a "div":Add scroll
+                                          capability to Gantt chart view
+                                        </span>
+                                        <span class="_kqswh2mm">
+                                          <div
+                                            data-component-selector="issue-field-summary-inline-edit.ui.read.edit-icon"
+                                            class="_16jlidpf _1o9zidpf _i0dlexct _kqswstnw _154iidpf _1ltvidpf _t9ecl1km"
+                                          >
+                                            <div role="presentation">
+                                              <button
+                                                class="_btpd9bua _w1ap9bua _axtob3bt _1uoz1ule css-9snh2d"
+                                                tabindex="0"
+                                                type="button"
+                                              >
+                                                <span class="css-bwxjrz">
+                                                  <span
+                                                    data-testid="issue-field-summary-inline-edit.ui.read.edit-edit-filled-icon"
+                                                    role="img"
+                                                    aria-label="Edit Summary"
+                                                    class="css-1wits42"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "currentColor",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-surface, #FFFFFF)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <path
+                                                        d="M4.02 19.23a1 1 0 001.18 1.18l3.81-.78-4.21-4.21-.78 3.81zM19.844 6.707l-2.12-2.122A1.997 1.997 0 0016.308 4c-.512 0-1.024.195-1.415.585l-9.757 9.758 4.95 4.95 9.757-9.758a2 2 0 000-2.828z"
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      ></path>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="y8i3hb-0 kvmZCr">
+                                <div
+                                  class="_1e0c11p5 _1bsb1osq _zulpoqx6 _1tke1f4h _2z05hkll _yv0e1xhj _1lmc1r3e yse7za_footer"
+                                  style={{
+                                    "--_o48r1v":
+                                      '"yse7za_primary yse7za_tertiary yse7za_secondary"',
+                                  }}
+                                >
+                                  <div class="yse7za_footerChildSection y8i3hb-6 bdNWj">
+                                    <div class="_1e0c1txw _1bah1h6o _2lx21bp4">
+                                      <div role="presentation">
+                                        <img
+                                          class="sc-1j9o0vm-0 dMMVlq"
+                                          alt="Task"
+                                          src="/rest/api/2/universal_avatar/view/type/issuetype/avatar/10318?size=medium"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div class="_16jlidpf _1o9zkb7n _i0dl1wug _1eim1xrj _o5721q9c _1reo15vq _18m915vq _1e38mo4m">
+                                      <div role="presentation">
+                                        <a
+                                          class="sc-15cfu5s-0 kshFWQ"
+                                          href="/browse/AIR-10"
+                                          target="_blank"
+                                        >
+                                          <span class="_1e0c1ule _1reo15vq _18m915vq _1bto1l2s _1wyb1crf _k48pni7l _syaz1o15">
+                                            AIR-10
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="yse7za_footerChildSection y8i3hb-8 iarmCU">
+                                    <div class="e1ln4w-0 eWrDab">
+                                      <div
+                                        data-testid="software-board.board-container.board.card-container.card.story-point-field.wrapper"
+                                        class="_16jlkb7n _1o9zkb7n _i0dlf1ug _4cvr1h6o _1pxtutpp _1idistnw _gs1n1qbz _13jz1txw _bssb1txw _1mhz1txw _1mi81txw _1e0cglyw _gx371q9c _1bt612gs _1bb7idpf _wv4j1n1a _1nf9idpf _4t3i1f4h"
+                                        style={{ "--_4sdc78": "3" }}
+                                      >
+                                        <div class="_1bchidpf _1yb1idpf _79paidpf _1rhwidpf _d8r5idpf _vdof18uv _11j3glyw _1yqt24b2 _o56l44jv _1w2r1i6y _1vza1i6y _skol1r31 _b0x6glyw _1qodidpf">
+                                          <div class="sc-1u79nuj-0 fFzhmA">
+                                            <form>
+                                              <div class="css-q5x77e">
+                                                <div class="css-1v0cd8t">
+                                                  <button
+                                                    aria-label="Edit"
+                                                    type="button"
+                                                    class="css-g2hnkr"
+                                                  ></button>
+                                                  <div
+                                                    role="presentation"
+                                                    data-read-view-fit-container-width="false"
+                                                    class="css-1p15jwl"
+                                                  >
+                                                    <div
+                                                      data-component-selector="jira-issue-field-inline-edit-read-view-container"
+                                                      class="_1ltvidpf _ca0qt94y _19pkidpf"
+                                                    >
+                                                      <div
+                                                        data-testid="issue-field-number-inline-edit-readview.ui.wrapper"
+                                                        class="_19itj1ic"
+                                                      >
+                                                        <div
+                                                          data-testid="issue-field-number-inline-edit-readview.ui.hover-container"
+                                                          class="_80omtlke _1lgibn51"
+                                                        >
+                                                          <span
+                                                            data-testid="issue-field-number-inline-edit-readview.ui.badge"
+                                                            class="css-6jr8tc"
+                                                          >
+                                                            <span class="css-1lt331k">
+                                                              -
+                                                            </span>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="y8i3hb-7 kenoZY">
+                                    <div
+                                      role="button"
+                                      data-testid="software-board.board-container.board.card-container.card.assignee-field.button"
+                                      class="_80omtlke _1gp47079 _1di41qbz"
+                                      style={{ "--_4sdc78": "3" }}
+                                    >
+                                      <button class="sc-1bi5d3z-0 kCbgkb">
+                                        <div class="_1bsb1f4h _4t3i1f4h _ca0qidpf _u5f3idpf _n3tdidpf _19bvidpf _vchhusvi _80om73ad">
+                                          <div role="presentation">
+                                            <div
+                                              data-testid="issue-field-assignee.common.ui.read-view.popover.avatar"
+                                              role="img"
+                                              aria-labelledby="340val-avatar-label"
+                                              style={{
+                                                display: "inline-block",
+                                                position: "relative",
+                                                outline: "0px",
+                                              }}
+                                            >
+                                              <span
+                                                class="css-vnrk9l"
+                                                data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--inner"
+                                              >
+                                                <span class="css-14m39g1">
+                                                  <span
+                                                    data-testid="issue-field-assignee.common.ui.read-view.popover.avatar--person"
+                                                    aria-hidden="true"
+                                                    class="css-snhnyn"
+                                                    style={{
+                                                      "--icon-primary-color":
+                                                        "var(--ds-icon-inverse, #FFFFFF)",
+                                                      "--icon-secondary-color":
+                                                        "var(--ds-icon-subtle, #8993A4)",
+                                                    }}
+                                                  >
+                                                    <svg
+                                                      width="24"
+                                                      height="24"
+                                                      viewBox="0 0 24 24"
+                                                      role="presentation"
+                                                    >
+                                                      <g
+                                                        fill="currentColor"
+                                                        fill-rule="evenodd"
+                                                      >
+                                                        <path d="M6 14c0-1.105.902-2 2.009-2h7.982c1.11 0 2.009.894 2.009 2.006v4.44c0 3.405-12 3.405-12 0V14z"></path>
+                                                        <circle
+                                                          cx="12"
+                                                          cy="7"
+                                                          r="4"
+                                                        ></circle>
+                                                      </g>
+                                                    </svg>
+                                                  </span>
+                                                </span>
+                                              </span>
+                                              <span
+                                                id="340val-avatar-label"
+                                                hidden=""
+                                              >
+                                                Unassigned
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          data-testid="software-context-menu.ui.context-menu"
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          class="_kqswstnw"
+                          style={{
+                            "--_16yv8lz": "0px",
+                            "--_1fbn7yv": "0px",
+                          }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-1hc9cht-0 eIJaZP"
+            data-component-selector="platform-board-kit.ui.column.draggable-column"
+            data-testid="platform-board-kit.ui.column.draggable-column.styled-wrapper"
+            draggable="true"
+            data-drop-target-for-element="true"
+          >
+            <div class="sc-1hc9cht-1 FxHxE">
+              <div class="__board-test-hook__column sc-1ef3ied-1 cgwwdw j4whmj-0 gftcoT">
+                <div class="sc-1xtha37-1 hSyVYa sc-1xtha37-0 hpIWPi">
+                  <div
+                    class="sc-1k8t1g3-0 letSNF"
+                    data-testid="platform-board-kit.common.ui.column-header.header.column-header-container"
+                  >
+                    <div
+                      class="_1e0c1txw _2lx21bp4 _1n261q9c _1bah1h6o _4cvr1fhb _16jlkb7n _1o9zkb7n _i0dl1wug _1wpz1wug _p12f1osq _7ehi2jkb _nt751r31 _49pcglyw _1hvw1o36 _1yt4iq2b _1bsb1osq _4t3is4d4"
+                      style={{
+                        "--_6nps2s": "var(--ds-space-200, 16px) 0",
+                        "--_16ia0uc": "calc(100% - var(--ds-space-400, 32px))",
+                      }}
+                    >
+                      <div class="sc-1wvkof1-2 dXSenY">
+                        <div class="sc-1wvkof1-3 fiqzkn">
+                          <div class="sc-1dbmt9d-0 kSUAZi">
+                            <form>
+                              <div class="css-q5x77e">
+                                <div class="css-1v0cd8t">
+                                  <button
+                                    aria-label="Edit "
+                                    type="button"
+                                    class="css-g2hnkr"
+                                  ></button>
+                                  <div
+                                    role="presentation"
+                                    data-read-view-fit-container-width="true"
+                                    class="css-u3i0v"
+                                  >
+                                    <div class="_1ul9idpf _1e0c1txw _4cvr1h6o">
+                                      <h2
+                                        class="__board-test-hook__column-title j-BFpW_compactColumnTitle rj51p4-0 eddmWW"
+                                        aria-label="Done"
+                                        data-test-id="platform-board-kit.common.ui.column-header.editable-title.column-title.column-title"
+                                        data-component-selector="platform-board-kit.ui.column-title"
+                                      >
+                                        <div
+                                          class="rj51p4-1 jbcAnp"
+                                          title="Done"
+                                        >
+                                          Done
+                                        </div>
+                                      </h2>
+                                      <div
+                                        data-test-id="platform-board-kit.common.ui.column-header.editable-title.done-column-tick.done-column-tick"
+                                        class="_1e0c1txw _1bah1h6o _4cvr1h6o _vwz4kb7n _19bv1b66"
+                                      >
+                                        <div role="presentation">
+                                          <span
+                                            aria-hidden="true"
+                                            class="css-1wits42"
+                                            style={{
+                                              "--icon-primary-color":
+                                                "var(--ds-icon-success, #00875A)",
+                                              "--icon-secondary-color":
+                                                "var(--ds-surface, #FFFFFF)",
+                                            }}
+                                          >
+                                            <svg
+                                              width="24"
+                                              height="24"
+                                              viewBox="0 0 24 24"
+                                              role="presentation"
+                                            >
+                                              <path
+                                                d="M6.735 12.322a1 1 0 00-1.47 1.356l3.612 3.919c.537.526 1.337.526 1.834.03l.364-.359a2335.638 2335.638 0 003.939-3.883l.04-.04a492.598 492.598 0 003.658-3.643 1 1 0 00-1.424-1.404 518.42 518.42 0 01-3.64 3.625l-.04.04a2049.114 2049.114 0 01-3.775 3.722l-3.098-3.363z"
+                                                fill="currentColor"
+                                              ></path>
+                                            </svg>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="_1e0c1txw _kqswstnw _1xi2u2gc _154i1ssb _t9ec1i34">
+                      <div
+                        class="agility-column-menu-meatball"
+                        data-test-id="platform-board-kit.common.ui.column-header.header.meatball"
+                      >
+                        <div class="sc-11ovnr3-0 itbugx">
+                          <button
+                            aria-expanded="false"
+                            aria-haspopup="true"
+                            aria-label="Done column"
+                            class="css-9snh2d"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <span class="css-bwxjrz">
+                              <span
+                                role="img"
+                                aria-label="more"
+                                class="css-snhnyn"
+                                style={{
+                                  "--icon-primary-color": "currentColor",
+                                  "--icon-secondary-color":
+                                    "var(--ds-surface, #FFFFFF)",
+                                }}
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  role="presentation"
+                                >
+                                  <g fill="currentColor" fill-rule="evenodd">
+                                    <circle cx="5" cy="12" r="2"></circle>
+                                    <circle cx="12" cy="12" r="2"></circle>
+                                    <circle cx="19" cy="12" r="2"></circle>
+                                  </g>
+                                </svg>
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  data-testid="software-board.board-container.board.virtual-board.fast-virtual-list.fast-virtual-list-wrapper"
+                  class="_kqswh2mm _18s81jus _njlpp9nq _16jlkb7n"
+                  style={{
+                    minHeight: "85px",
+                    backgroundColor: "var(--ds-surface-sunken, #F4F5F7)",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "0px",
+                      width: "100%",
+                      contain: "style",
+                    }}
+                  >
+                    <div class="sc-1evhgbk-4 dYsXjB">
+                      <div
+                        data-testid="platform-inline-card-create.ui.container"
+                        class="css-1uddfbi"
+                      >
+                        <div class="css-k5cxwk">
+                          <button
+                            class="css-a25ue6"
+                            data-testid="platform-inline-card-create.ui.trigger.visible.button"
+                            tabindex="0"
+                            type="button"
+                          >
+                            <span class="css-4h66kx">
+                              <span
+                                aria-hidden="true"
+                                class="css-1wits42"
+                                style={{
+                                  "--icon-primary-color":
+                                    "var(--ds-icon, #42526E)",
+                                  "--icon-secondary-color":
+                                    "var(--ds-surface, #FFFFFF)",
+                                }}
+                              >
+                                <svg
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  role="presentation"
+                                >
+                                  <path
+                                    d="M13 11V3.993A.997.997 0 0012 3c-.556 0-1 .445-1 .993V11H3.993A.997.997 0 003 12c0 .557.445 1 .993 1H11v7.007c0 .548.448.993 1 .993.556 0 1-.445 1-.993V13h7.007A.997.997 0 0021 12c0-.556-.445-1-.993-1H13z"
+                                    fill="currentColor"
+                                    fill-rule="evenodd"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </span>
+                            <span class="css-178ag6o">
+                              <span class="_1e0c1ule _y3gn1e5h _1bto1l2s _1reo15vq">
+                                Create issue
+                              </span>
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc-1l2p386-0 oHzZY">
+                      <div role="presentation">
+                        <a
+                          class="css-1y5q6ju"
+                          href="/jira/software/projects/AIR/issues/?filter=doneissues&amp;referrer=agility"
+                          tabindex="0"
+                        >
+                          <span class="css-4h66kx">
+                            <span
+                              aria-hidden="true"
+                              class="css-1wits42"
+                              style={{
+                                "--icon-primary-color": "currentColor",
+                                "--icon-secondary-color":
+                                  "var(--ds-surface, #FFFFFF)",
+                              }}
+                            >
+                              <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                role="presentation"
+                              >
+                                <path
+                                  d="M16.436 15.085l3.94 4.01a1 1 0 01-1.425 1.402l-3.938-4.006a7.5 7.5 0 111.423-1.406zM10.5 16a5.5 5.5 0 100-11 5.5 5.5 0 000 11z"
+                                  fill="currentColor"
+                                  fill-rule="evenodd"
+                                ></path>
+                              </svg>
+                            </span>
+                          </span>
+                          <span class="css-178ag6o">See all Done issues</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default TodoList;

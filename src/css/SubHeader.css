@@ -1,0 +1,12 @@
+/* SubHeader styles */
+.sub-header {
+  background-color: rgb(112, 58, 112); /* Violet background color */
+  padding: 1px; /* Padding for spacing */
+}
+
+.sub-header-text {
+  color: white; /* White text color */
+  font-size: 12px; /* Adjust the font size to match the Header */
+  font-weight: bold; /* Bold font weight */
+  padding-left: 2%;
+}
